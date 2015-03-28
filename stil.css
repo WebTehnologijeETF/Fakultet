@@ -44,9 +44,14 @@ body
 	padding: 5px 10px 5px 5px;
 }
 
-#logina:hover
+#login a:hover
 {
 	text-decoration: underline;
+}
+
+.zadnji_u_meniju a
+{
+	border-right: 0 !important;
 }
 
 .glavni_meni li
