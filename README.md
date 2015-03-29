@@ -1,4 +1,4 @@
 # Fakultet
 
 IT Fakultet
-- Stranica za izmišljeni fakultet -
+- Stranica za izmišljeni fakultet
