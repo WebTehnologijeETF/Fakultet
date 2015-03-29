@@ -374,17 +374,17 @@ body
 	border: 1px solid black;
 }
 
-#red1
+.red1
 {
 	background-color: #F8F8F8;
 }
 
-#kolona1 th
+.kolona1 th
 {
 	width: 80px;
 }
 
-#master1
+.master1
 {
 	padding: 15px 0px 35px 60px;
 	margin-left: 177px;
@@ -453,7 +453,7 @@ body
 #forma button
 {
 	padding: 5px 8px 5px 8px;
-	margin-left: 225px;
+	margin-left: 386px;
 }
 
 #forma input
@@ -463,9 +463,19 @@ body
 	width: 180px;
 }
 
+#forma label
+{
+	padding: 1px 2px 1px 3px;
+}
+
 #pitanje input
 {
-	width: 275px;
+	width: 443px;
+}
+
+#pitanje
+{
+	padding: 15px 1px 20px 1px;
 }
 
 #kontakt
