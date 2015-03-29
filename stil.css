@@ -422,3 +422,58 @@ body
 	background-repeat: no-repeat;
 	margin-top: 5px;
 }
+
+#kontakt h3
+{
+	background-color: lightgray;
+	padding: 5px 10px 5px 10px;
+	font-family: Philosopher;
+	font-size: 15pt;
+}
+
+#kontakt p
+{
+	padding: 5px 10px 5px 10px;
+	text-align: left;
+	font-size: 14pt;
+}
+
+#forma
+{
+	padding: 0px 10px 10px 35px;
+}
+
+#forma p
+{
+	padding: 5px 10px 5px 10px;
+	text-align: left;
+	font-size: 12pt;
+}
+
+#forma button
+{
+	padding: 5px 8px 5px 8px;
+	margin-left: 225px;
+}
+
+#forma input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 180px;
+}
+
+#pitanje input
+{
+	width: 275px;
+}
+
+#kontakt
+{
+	width: 980px;
+	height: 250px;
+	padding: 0px 0px 5px 0px;
+	border-left: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
