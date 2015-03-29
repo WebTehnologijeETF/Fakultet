@@ -365,6 +365,11 @@ body
 	padding: 5px 5px 5px 5px;
 }
 
+.tabela_program td
+{
+	width: 330px;
+}
+
 .tabela_program caption
 {
 	background-color: lightblue;
