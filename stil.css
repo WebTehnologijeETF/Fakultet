@@ -97,8 +97,8 @@ body
 .novosti_konkurs
 {
 	float: right;
-	width: 500px;
-	padding: 5px 10px 5px 10px;
+	width: 490px;
+	padding: 1px 2px 15px 10px;
 }
 
 .novosti_konkurs h4
@@ -176,7 +176,8 @@ body
 {
 	font-size: 12pt;
 	text-decoration: none;
-	color: #00CC66;
+	font-weight: bold;
+	color: #009999;
 	padding: 5px 30px 5px 10px;
 	float: right;
 }
@@ -231,7 +232,8 @@ body
 {
 	font-size: 12pt;
 	text-decoration: none;
-	color: #00CC66;
+	font-weight: bold;
+	color: #009999;
 	padding: 24px 30px 5px 10px;
 	float: right;
 }
@@ -259,7 +261,7 @@ body
 {
 	width: 980px;
 	height: 250px;
-	padding: 0px 10px 5px 0px;
+	padding: 0px 0px 5px 0px;
 	border-left: 2px solid gray;
 	border-bottom: 2px solid gray;
 }
@@ -267,6 +269,7 @@ body
 #partneri ul
 {
 	list-style-image: url("slike/partner1.png");
+	padding: 10px 5px 5px 100px;
 }
 
 #partneri h3
@@ -332,7 +335,7 @@ body
 .bm_klasa
 {
 	width: 980px;
-	padding: 0px 10px 5px 0px;
+	padding: 0px 0px 5px 0px;
 	border-left: 2px solid gray;
 	border-bottom: 2px solid gray;
 }
@@ -348,9 +351,74 @@ body
 .tabela_program
 {
 	border-collapse: collapse;
+	width: 500px;
 }
 
-.tabela_program table,th,td
+.tabela_program table,td,th
 {
 	border: 1px solid gray;
+}
+
+.tabela_program td,th
+{
+	height: 25px;
+	padding: 5px 5px 5px 5px;
+}
+
+.tabela_program caption
+{
+	background-color: lightblue;
+	font-weight: bold;
+	font-size: 13pt;
+	padding: 10px 5px 10px 5px;
+	border: 1px solid black;
+}
+
+#red1
+{
+	background-color: #F8F8F8;
+}
+
+#kolona1 th
+{
+	width: 80px;
+}
+
+#master1
+{
+	padding: 15px 0px 35px 60px;
+	margin-left: 177px;
+	margin-right: 40px;
+}
+
+#desno h3
+{
+	background-color: lightgray;
+	padding: 7px 10px 5px 10px;
+	font-family: Philosopher;
+	font-size: 15pt;
+	float: right;
+	width: 490px;
+}
+
+.konkurs_slika
+{
+	float: right;
+	width: 76px;
+	height: 77px;
+	padding: 10px 50px 5px 1px;
+	background-image: url("slike/novost3_final.jpg");
+	background-repeat: no-repeat;
+	margin-top: 5px;
+}
+
+.odbrana_slika
+{
+	float: right;
+	width: 76px;
+	height: 77px;
+	padding: 10px 50px 5px 1px;
+	background-image: url("slike/novost1_final.jpg");
+	background-repeat: no-repeat;
+	margin-top: 5px;
 }
