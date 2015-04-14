@@ -33,9 +33,17 @@
 		<p> Ukoliko imate bilo kakvih pitanja vezanih za upis ili neki od naših programa, slobodno nas kontaktirajte! </p>
 		<div id="forma">
 			<form action=index.php method=get>
-			<label for="email"> E-mail adresa: </label> 
-			<input type="text" name="email" id="email">
-			<label for="biraj">	Odaberite: </label>
+			<div id="imePrezime">
+				<label for="ime"> Vaše ime i prezime: </label>
+				<input type="text" name="ime" id="ime">
+			</div>
+			<br>
+			<div id="mail">
+				<label for="email"> E-mail adresa:    </label> 
+				<input type="email" name="email" id="email">
+			</div>
+			<br>
+			<label for="biraj">	Odaberite tip poruke: </label>
 				<select id="biraj">
 					<option value="pitanje"> Pitanje </option>
 					<option value="sugestija"> Sugestija </option>
@@ -43,7 +51,7 @@
 			<br>
 			<div id="pitanje">
 				<label for="upit"> Unesite svoj komentar ili pitanje: </label><br> 
-				<input type=text name=email id="upit">
+				<textarea id="upit" rows=10 cols=61> </textarea>
 			</div>
 			<button type="button"> Pošalji </button>
 			</form>

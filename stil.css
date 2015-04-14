@@ -448,24 +448,10 @@ body
 	padding: 0px 10px 10px 35px;
 }
 
-#forma p
-{
-	padding: 5px 10px 5px 10px;
-	text-align: left;
-	font-size: 12pt;
-}
-
 #forma button
 {
 	padding: 5px 8px 5px 8px;
 	margin-left: 386px;
-}
-
-#forma input
-{
-	font-size: 10pt;
-	padding: 1px;
-	width: 180px;
 }
 
 #forma label
@@ -473,21 +459,36 @@ body
 	padding: 1px 2px 1px 3px;
 }
 
-#pitanje input
-{
-	width: 443px;
-}
-
 #pitanje
 {
-	padding: 15px 1px 20px 1px;
+	padding: 15px 1px 15px 1px;
 }
 
 #kontakt
 {
-	width: 980px;
-	height: 250px;
+	width: 980px; 
 	padding: 0px 0px 5px 0px;
 	border-left: 2px solid gray;
 	border-bottom: 2px solid gray;
+}
+
+#imePrezime input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 300px;
+	margin-left: 7px;
+}
+
+#mail input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 300px;
+	margin-left: 43px;
+}
+
+#pitanje textarea
+{
+	margin-top: 5px;
 }
