@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title> ITFakultet::Kontakt </title>
 <link rel="stylesheet" type="text/css" href="stil.css">
+<script src="kontaktValidacija.js"></script>
 </head>
 <body>
 
@@ -32,15 +33,17 @@
 		<h3>Kontaktirajte nas</h3>
 		<p> Ukoliko imate bilo kakvih pitanja vezanih za upis ili neki od naših programa, slobodno nas kontaktirajte! </p>
 		<div id="forma">
-			<form action=index.php method=get>
+			<form action="fakultet_kontakt.html" method=get onsubmit="return kontaktValidacija();">
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
-				<input type="text" name="ime" id="ime">
+				<input type="text" name="ime" id="ime" placeholder="Unesite ime i prezime">
+				<p id="obavezno"> * Obavezno unijeti validne podatke </p>
 			</div>
 			<br>
 			<div id="mail">
-				<label for="email"> E-mail adresa:    </label> 
-				<input type="email" name="email" id="email">
+				<label for="eemail"> E-mail adresa: </label> 
+				<input type="email" name="eemail" id="eemail" placeholder="Unesite validnu email adresu">
+				<p id="obaveznoo"> * Obavezno unijeti validan email </p>
 			</div>
 			<br>
 			<label for="biraj">	Odaberite tip poruke: </label>
@@ -51,9 +54,12 @@
 			<br>
 			<div id="pitanje">
 				<label for="upit"> Unesite svoj komentar ili pitanje: </label><br> 
-				<textarea id="upit" rows=10 cols=61> </textarea>
+				<textarea id="upit" rows="10" cols="61" placeholder="Poruka..."></textarea>
+				<p id="poruka"> * Obavezno unijeti </p>
 			</div>
-			<button type="button"> Pošalji </button>
+			<div id="dugme">
+				<input type="submit" value="Pošalji"> 
+			</div>
 			</form>
 		</div>
 	</div>

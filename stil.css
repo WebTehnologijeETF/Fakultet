@@ -448,7 +448,7 @@ body
 	padding: 0px 10px 10px 35px;
 }
 
-#forma button
+#dugme input
 {
 	padding: 5px 8px 5px 8px;
 	margin-left: 386px;
@@ -491,4 +491,13 @@ body
 #pitanje textarea
 {
 	margin-top: 5px;
+}
+
+#forma p
+{
+	font-size: 10pt;
+	color: red;
+	text-align: left;
+	padding: 0px 2px 0px 1px;
+	display: none;	
 }
