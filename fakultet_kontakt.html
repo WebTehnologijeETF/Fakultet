@@ -36,14 +36,16 @@
 			<form action="fakultet_kontakt.html" method=get onsubmit="return kontaktValidacija();">
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
-				<input type="text" name="ime" id="ime" placeholder="Unesite ime i prezime">
-				<p id="obavezno"> * Obavezno unijeti validne podatke </p>
+				<input type="text" name="ime" id="ime" placeholder="Dina Ahmić">
+				<div class="validacija_slika" id="slika1"> </div>
+				<p id="obavezno"> Ime i prezime moraju imati više od tri slova </p>
 			</div>
 			<br>
 			<div id="mail">
 				<label for="eemail"> E-mail adresa: </label> 
-				<input type="email" name="eemail" id="eemail" placeholder="Unesite validnu email adresu">
-				<p id="obaveznoo"> * Obavezno unijeti validan email </p>
+				<input type="email" name="eemail" id="eemail" placeholder="dahmic1@etf.unsa.ba">
+				<div class="validacija_slika" id="slika2"> </div>
+				<p id="obaveznoo"> Obavezno unijeti validan email </p>
 			</div>
 			<br>
 			<label for="biraj">	Odaberite tip poruke: </label>
@@ -55,7 +57,8 @@
 			<div id="pitanje">
 				<label for="upit"> Unesite svoj komentar ili pitanje: </label><br> 
 				<textarea id="upit" rows="10" cols="61" placeholder="Poruka..."></textarea>
-				<p id="poruka"> * Obavezno unijeti </p>
+				<div class="validacija_slika" id="slika3"> </div>
+				<p id="poruka"> Obavezno unijeti </p>
 			</div>
 			<div id="dugme">
 				<input type="submit" value="Pošalji"> 

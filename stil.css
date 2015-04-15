@@ -297,7 +297,6 @@ body
 .studij_klasa
 {
 	width: 980px;
-	height: 250px;
 	padding: 0px 10px 5px 0px;
 	border-left: 2px solid gray;
 	border-bottom: 2px solid gray;
@@ -323,7 +322,7 @@ body
 	font-size: 14pt;
 	text-decoration: none;
 	color: black;
-	padding: 5px 30px 5px 10px;
+	padding: 5px 30px 5px 20px;
 	font-weight: bold;
 }
 
@@ -496,8 +495,200 @@ body
 #forma p
 {
 	font-size: 10pt;
-	color: red;
+	color: #D80000;
 	text-align: left;
 	padding: 0px 2px 0px 1px;
 	display: none;	
+}
+
+#bnivo2
+{
+	display: none;
+}
+
+#bpnivo3
+{
+	display: none;
+}
+
+#bdnivo3
+{
+	display: none;
+}
+
+#btnivo3
+{
+	display: none;
+}
+
+#mnivo2
+{
+	display: none;
+}
+
+#mpnivo3
+{
+	display: none;
+}
+
+#mdnivo3
+{
+	display: none;
+}
+
+#bnivo2 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: bold;
+}
+
+#bnivo2 a:hover
+{
+	text-decoration: underline;
+}
+
+#bnivo2 ul
+{
+	list-style-type: none;
+}
+
+#bpnivo3 ul
+{
+	list-style-type: circle;
+	padding: 0px 0px 0px 50px;
+}
+
+#bdnivo3 ul
+{
+	list-style-type: circle;
+	padding: 0px 0px 0px 50px;
+}
+
+#btnivo3 ul
+{
+	list-style-type: circle;
+	padding: 0px 0px 0px 50px;
+}
+
+#bpnivo3 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: normal;
+}
+
+#bpnivo3 a:hover
+{
+	text-decoration: underline;
+}
+
+#bdnivo3 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: normal;
+}
+
+#bdnivo3 a:hover
+{
+	text-decoration: underline;
+}
+
+#btnivo3 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: normal;
+}
+
+#btnivo3 a:hover
+{
+	text-decoration: underline;
+}
+
+#mnivo2 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: bold;
+}
+
+#mnivo2 a:hover
+{
+	text-decoration: underline;
+}
+
+#mnivo2 ul
+{
+	list-style-type: none;
+}
+
+#mpnivo3 ul
+{
+	list-style-type: circle;
+	padding: 0px 0px 0px 50px;
+}
+
+#mdnivo3 ul
+{
+	list-style-type: circle;
+	padding: 0px 0px 0px 50px;
+}
+
+#mpnivo3 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: normal;
+}
+
+#mpnivo3 a:hover
+{
+	text-decoration: underline;
+}
+
+#mdnivo3 a
+{
+	font-size: 13pt;
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px 5px 10px;
+	font-weight: normal;
+}
+
+#mdnivo3 a:hover
+{
+	text-decoration: underline;
+}
+
+#bnivo2 li
+{
+	padding: 0px 0px 3px 0px;
+}
+
+#mnivo2 li
+{
+	padding: 0px 0px 3px 0px;
+}
+
+.validacija_slika
+{
+	width: 16px;
+	height: 16px;
+	background-image: url("slike/validacija.png");
+	background-repeat: no-repeat;
+	display: none;
 }

@@ -9,42 +9,54 @@ function kontaktValidacija(){
 	var por = false;
 	
 	var imePrezime = /^([A-ZŠĐČĆŽ][a-zšđčćž][a-zšđčćž]([a-zšđčćž]+)?[\s][A-ZŠĐČĆŽ][a-zšđčćž][a-zšđčćž]([a-zšđčćž]+)?)+$/;
-	var mailRegex = /^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/;	
+	var mailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;	
 	
 	if(!imePrezime.test(ime.value)){
 		ime.style.borderColor = "red";
 		validna = false;
 		imep = true;
+		//document.getElementByClassName('validacija_slika').style.display="inline-block";
+		document.getElementById('slika1').style.display="inline-block";
 		document.getElementById('obavezno').style.display="inline";
 	}
 	else{
 		ime.style.borderColor = "";
 		imep = false;
 		document.getElementById('obavezno').style.display="none";
+		document.getElementById('slika1').style.display="none";
+		//document.getElementByClassName('validacija_slika').style.display="none";
 	}
 	
 	if(!mailRegex.test(mail.value)){
 		mail.style.borderColor = "red";
 		validna = false;
 		maill = true;
+		//document.getElementByClassName('validacija_slika').style.display="inline-block";
+		document.getElementById('slika2').style.display="inline-block";
 		document.getElementById('obaveznoo').style.display="inline";
 	}
 	else{
 		mail.style.borderColor = "";
 		maill = false;
 		document.getElementById('obaveznoo').style.display="none";
+		document.getElementById('slika2').style.display="none";
+		//document.getElementByClassName('validacija_slika').style.display="none";
 	}
 	
 	if(poruka.value == null || poruka.value == '' || poruka.value.length < 5){
 		poruka.style.borderColor = "red";
 		validna = false;
 		por = true;
+		//document.getElementByClassName('validacija_slika').style.display="inline-block";
+		document.getElementById('slika3').style.display="inline-block";
 		document.getElementById('poruka').style.display="inline";
 	}
 	else{
 		poruka.style.borderColor = "";
 		por = false;
 		document.getElementById('poruka').style.display="none";
+		document.getElementById('slika3').style.display="none";
+		//document.getElementByClassName('validacija_slika').style.display="none";
 	}
 	
 	if(imep){
