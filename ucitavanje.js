@@ -75,3 +75,29 @@ function master_ucitaj()
 	ajax.open("GET", "fakultet_master.html", true);
 	ajax.send();
 }
+
+function zpregled_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "zavrsni_pregled.html", true);
+	ajax.send();
+}
+
+function zdodaj_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "zavrsni_dodaj.html", true);
+	ajax.send();
+}

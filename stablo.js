@@ -81,3 +81,15 @@ function master2(){
 		document.getElementById('mdnivo3').style.display="none";
 	}
 }
+
+function zavrsni(){
+	var x=document.getElementById('znivo1plus');
+	if (x.innerHTML=="+"){
+		x.innerHTML="-";
+		document.getElementById('znivo2').style.display="block";
+	}
+	else {
+		x.innerHTML="+";
+		document.getElementById('znivo2').style.display="none";
+	}
+}
