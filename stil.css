@@ -487,6 +487,22 @@ body
 	margin-left: 43px;
 }
 
+#mjestoValidacija input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 300px;
+	margin-left: 87px;
+}
+
+#PBValidacija input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 300px;
+	margin-left: 40px;
+}
+
 #pitanje textarea
 {
 	margin-top: 5px;

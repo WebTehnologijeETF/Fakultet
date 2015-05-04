@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title> ITFakultet::Studij </title>
-<link rel="stylesheet" type="text/css" href="stil.css">
-<script src="stablo.js"></script>
-</head>
-<body>
-
-<div class="okvir">
-	<div id="zaglavlje">
-		<h1> Fakultet </h1>
-		<div id="login">
-			<a href="#"> Log in </a>
-		</div>
-	</div>
-
-	<div class="glavni_meni">
-		<ul>
-			<li><a href="fakultet_naslovna.html">Početna</a></li>
-			<li><a href="#">O fakultetu</a></li>
-			<li><a href="fakultet_studij.html">Studij</a></li>
-			<li><a href="#">Obavještenja</a></li>
-			<li><a href="fakultet_partneri.html">Partneri</a></li>
-			<li class="zadnji_u_meniju"><a href="fakultet_kontakt.html">Kontakt</a></li>
-		</ul>
-	</div>
-	
-	<div id="baner"></div>
-
 	<div class="studij_klasa">
 		<h3> Nastavni plan i program </h3>
 		<p> Na I i II ciklusu studija važi nastavni plan i program koji možete pogledati na linkovima ispod. </p>
@@ -39,24 +8,24 @@
 						<li><a href="#" onclick="bachelor1()"> <span id="b1plus">+</span> Prva godina studija</a>
 							<div id="bpnivo3">
 								<ul>
-									<li><a href="fakultet_bachelor.html">I semestar</a></li>
-									<li><a href="fakultet_bachelor.html">II semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">I semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">II semestar</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="#" onclick="bachelor2()"> <span id="b2plus">+</span> Druga godina studija</a>
 							<div id="bdnivo3">
 								<ul>
-									<li><a href="fakultet_bachelor.html">III semestar</a></li>
-									<li><a href="fakultet_bachelor.html">IV semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">III semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">IV semestar</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="#" onclick="bachelor3()"> <span id="b3plus">+</span> Treća godina studija</a>
 							<div id="btnivo3">
 								<ul>
-									<li><a href="fakultet_bachelor.html">V semestar</a></li>
-									<li><a href="fakultet_bachelor.html">VI semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">V semestar</a></li>
+									<li><a href="#" onclick="bachelor_ucitaj();return false;">VI semestar</a></li>
 									<li><a href="#">Završni radovi</a></li>
 								</ul>
 							</div>
@@ -70,16 +39,16 @@
 						<li><a href="#" onclick="master1()"> <span id="m1plus">+</span> Prva godina studija</a>
 							<div id="mpnivo3">
 								<ul>
-									<li><a href="fakultet_master.html">I semestar</a></li>
-									<li><a href="fakultet_master.html">II semestar</a></li>
+									<li><a href="#" onclick="master_ucitaj();return false;">I semestar</a></li>
+									<li><a href="#" onclick="master_ucitaj();return false;">II semestar</a></li>
 								</ul>
 							</div>
 						</li>
 						<li><a href="#" onclick="master2()"> <span id="m2plus">+</span> Druga godina studija</a>
 							<div id="mdnivo3">
 								<ul>
-									<li><a href="fakultet_master.html">III semestar</a></li>
-									<li><a href="fakultet_master.html">IV semestar</a></li>
+									<li><a href="#" onclick="master_ucitaj();return false;">III semestar</a></li>
+									<li><a href="#" onclick="master_ucitaj();return false;">IV semestar</a></li>
 									<li><a href="#">Završni radovi</a></li>
 								</ul>
 							</div>
@@ -91,9 +60,3 @@
 		</div>
 		
 	</div>
-
-	<div id="podnozje"><p>Copyright &copy; IT Fakultet 2015.</p></div>
-
-</div>
-</body>
-</html>

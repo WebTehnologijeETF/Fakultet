@@ -63,5 +63,55 @@ function kontaktValidacija(){
 		poruka.focus();
 	}
 	
-	return validna;
+	var ajax = new XMLHttpRequest();
+	var mjesto = document.getElementById('mjestoo').value;
+	mjesto = encodeURIComponent(mjesto);
+	var mjesto1 = document.getElementById('mjestoo');
+	var pbroj = document.getElementById('pbr').value;
+	pbroj = encodeURIComponent(pbroj);
+	var pbroj1 = document.getElementById('pbr');
+	ajax.onreadystatechange = function() {
+		if (ajax.readyState == 4 && ajax.status == 200){
+			var odgovor = JSON.parse(ajax.responseText);
+			if(odgovor.greska == "Nepostojeće mjesto"){
+				mjesto1.style.borderColor = "red";
+				mjesto1.focus();
+				document.getElementById('slika4').style.display = "inline-block";
+				document.getElementById('obaveznoM').innerHTML = odgovor.greska;
+				document.getElementById('obaveznoM').style.display = "inline";
+			}
+			else if(odgovor.greska == "Poštanski broj ne odgovara mjestu"){
+				mjesto1.style.borderColor = "red";
+				mjesto1.focus();
+				document.getElementById('slika4').style.display = "inline-block";
+				document.getElementById('obaveznoM').innerHTML = odgovor.greska;
+				document.getElementById('obaveznoM').style.display = "inline";
+			}
+			else{
+				mjesto1.style.borderColor = "";
+				document.getElementById('obaveznoM').style.display="none";
+				document.getElementById('slika4').style.display="none";
+			}
+			
+			if(odgovor.greska == "Nepostojeći poštanski broj"){
+				pbroj1.style.borderColor = "red";
+				pbroj1.focus();
+				document.getElementById('slika5').style.display = "inline-block";
+				document.getElementById('obaveznoPB').innerHTML = odgovor.greska;
+				document.getElementById('obaveznoPB').style.display = "inline";
+			}
+			else{
+				pbroj1.style.borderColor = "";
+				document.getElementById('obaveznoPB').style.display="none";
+				document.getElementById('slika5').style.display="none";
+			}
+		}
+		if (ajax.readyState == 4 && ajax.status == 404) {
+			document.getElementById('mjestoo').innerHTML = "Greska: nepoznat URL";
+		}
+	}
+	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto=" + mjesto + "&postanskiBroj=" + pbroj, true);
+	ajax.send();
+	
+	//return validna;
 }

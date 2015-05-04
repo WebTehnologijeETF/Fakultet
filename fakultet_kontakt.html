@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title> ITFakultet::Kontakt </title>
-<link rel="stylesheet" type="text/css" href="stil.css">
-<script src="kontaktValidacija.js"></script>
-</head>
-<body>
-
-<div class="okvir">
-	<div id="zaglavlje">
-		<h1> Fakultet </h1>
-		<div id="login">
-			<a href="#"> Log in </a>
-		</div>
-	</div>
-
-	<div class="glavni_meni">
-		<ul>
-			<li><a href="fakultet_naslovna.html">Početna</a></li>
-			<li><a href="#">O fakultetu</a></li>
-			<li><a href="fakultet_studij.html">Studij</a></li>
-			<li><a href="#">Obavještenja</a></li>
-			<li><a href="fakultet_partneri.html">Partneri</a></li>
-			<li class="zadnji_u_meniju"><a href="fakultet_kontakt.html">Kontakt</a></li>
-		</ul>
-	</div>
-	
-	<div id="baner"></div>
-
 	<div id="kontakt">
 		<h3>Kontaktirajte nas</h3>
 		<p> Ukoliko imate bilo kakvih pitanja vezanih za upis ili neki od naših programa, slobodno nas kontaktirajte! </p>
 		<div id="forma">
-			<form action="fakultet_kontakt.html" method=get onsubmit="return kontaktValidacija();">
+			<form onsubmit="kontaktValidacija(); return false;">
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
 				<input type="text" name="ime" id="ime" placeholder="Dina Ahmić">
@@ -46,6 +15,20 @@
 				<input type="email" name="eemail" id="eemail" placeholder="dahmic1@etf.unsa.ba">
 				<div class="validacija_slika" id="slika2"> </div>
 				<p id="obaveznoo"> Obavezno unijeti validan email </p>
+			</div>
+			<br>
+			<div id="mjestoValidacija">
+				<label for="mjestoo"> Mjesto: </label>
+				<input type="text" name="mjestoo" id="mjestoo" placeholder="Sarajevo">
+				<div class="validacija_slika" id="slika4"> </div>
+				<p id="obaveznoM"> </p>
+			</div>
+			<br>
+			<div id="PBValidacija">
+				<label for="pbr"> Poštanski broj: </label>
+				<input type="text" name="pbr" id="pbr" placeholder="71000">
+				<div class="validacija_slika" id="slika5"> </div>
+				<p id="obaveznoPB"> </p>
 			</div>
 			<br>
 			<label for="biraj">	Odaberite tip poruke: </label>
@@ -66,9 +49,3 @@
 			</form>
 		</div>
 	</div>
-
-	<div id="podnozje"><p>Copyright &copy; IT Fakultet 2015.</p></div>
-
-</div>
-</body>
-</html>
