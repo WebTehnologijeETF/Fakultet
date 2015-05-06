@@ -101,3 +101,4 @@ function zdodaj_ucitaj()
 	ajax.open("GET", "zavrsni_dodaj.html", true);
 	ajax.send();
 }
+

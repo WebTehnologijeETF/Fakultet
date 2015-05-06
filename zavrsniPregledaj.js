@@ -5,7 +5,7 @@ function zavrsniPregled()
 	
 	ajax.onreadystatechange = function() {// Anonimna funkcija
 		if (ajax.readyState == 4 && ajax.status == 200){
-			var proizvodi = JSON.parse(ajax.responseText); 
+			proizvodi = JSON.parse(ajax.responseText); 
 			tabela="<table class='tabela_program'>";
 			tabela+="<caption>";
 			tabela+="Završni radovi";
@@ -35,7 +35,7 @@ function zavrsniPregled()
 				tabela+=proizvodi[i].slika;
 				tabela+="</td>";
 				tabela+="<td>";
-				tabela+="<input type='button' value='Uredi' onclick='zavrsniUredi(" +proizvodi[i].id + ")'>";
+				tabela+="<input type='button' value='Uredi' onclick='zavrsniUredi(" + i + ")'>";
 				tabela+="<input type='button' value='Izbriši' onclick='zavrsniBrisi(" + proizvodi[i].id + ")'>";
 				tabela+="</td>";
 				tabela+="</tr>";
