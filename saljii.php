@@ -15,7 +15,7 @@
 	ini_set("smtp_port", "25");
 	ini_set("sendmail_from", "dahmic1@etf.unsa.ba");
 	$headers = "From: ".$eemail.PHP_EOL;
-	$headers .= "Cc: ajasarevic1@etf.unsa.ba".PHP_EOL; //ostavi sad za sad mne u cc da vidimo radi li :P
+	$headers .= "Cc: iprazina1@etf.unsa.ba".PHP_EOL; //ostavi sad za sad mne u cc da vidimo radi li :P
 	$headers .= "Content-Type: text/html; charset=utf-8".PHP_EOL;
 	$subject = "Kontakt - ".$tip.PHP_EOL; //a ovdje ne bi bilo lose da napises Kontakt - pitanje ili kontakt - sugestija :P
 	$message = $poruka;
