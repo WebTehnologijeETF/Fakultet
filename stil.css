@@ -429,7 +429,7 @@ body
 	width: 76px;
 	height: 77px;
 	padding: 10px 50px 5px 1px;
-	background-image: url("slike/novost1_final.jpg");
+	/*background-image: url("slike/novost1_final.jpg");*/
 	background-repeat: no-repeat;
 	margin-top: 5px;
 }
@@ -517,11 +517,14 @@ body
 
 #forma p
 {
-	font-size: 10pt;
-	color: #D80000;
 	text-align: left;
 	padding: 0px 2px 0px 1px;
-	display: none;	
+}
+
+#forma p.validacija {
+font-size: 10pt;
+color: #D80000;
+display: none;
 }
 
 #bnivo2
@@ -884,3 +887,43 @@ div #dugmeOsvjezi
 	padding: 5px 8px 5px 8px;
 	margin-left: 386px;
 }
+
+.detaljno_slika
+{
+	float: right;
+	width: 76px;
+	height: 77px;
+	padding: 10px 50px 5px 1px;
+	background-repeat: no-repeat;
+	margin-top: -70px;
+}
+
+#detaljno
+{
+	width: 980px;
+	/*height: 250px;*/
+	padding: 0px 0px 5px 0px;
+	border-left: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+
+#detaljno h3
+{
+	background-color: lightgray;
+	padding: 5px 10px 5px 10px;
+	font-family: Philosopher;
+	font-size: 15pt;
+}
+
+#novost_detaljno p
+{
+	font-family: Philosopher;
+	font-size: 12pt;
+}
+
+#novost_detaljno
+{
+	padding: 1px 0px 1px 20px;
+}
+

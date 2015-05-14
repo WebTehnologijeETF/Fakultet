@@ -7,7 +7,7 @@ function naslovna_ucitaj()
 		if (ajax.readyState == 4 && ajax.status == 404)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
-	ajax.open("GET", "fakultet_naslovna.html", true);
+	ajax.open("GET", "fakultet_naslovna.php", true);
 	ajax.send();
 }
 
@@ -46,7 +46,7 @@ function kontakt_ucitaj()
 		if (ajax.readyState == 4 && ajax.status == 404)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
-	ajax.open("GET", "fakultet_kontakt.html", true);
+	ajax.open("GET", "fakultet_kontakt.php", true);
 	ajax.send();
 }
 
@@ -102,3 +102,33 @@ function zdodaj_ucitaj()
 	ajax.send();
 }
 
+function detaljnije_ucitaj(naslov, autor, datum, slika, tekst, detaljniji_tekst)
+//function detaljnije_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "novosti_detaljnije.php?naslov="+naslov+"&autor="+autor+"&datum="+datum+"&slika="+slika+"&tekst="+tekst+"&detaljniji_tekst="+detaljniji_tekst, true);
+	//ajax.open("GET", "novosti_detaljnije.php?datum="+datum, true);
+	//ajax.open("GET", "novosti_detaljnije.html", true);
+	ajax.send();
+}
+
+function potvrdaSlanja_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "kontakt_forma_validacija.php", true);
+	//ajax.open("GET", "novosti_detaljnije.php?datum="+datum, true);
+	//ajax.open("GET", "novosti_detaljnije.html", true);
+	ajax.send();
+}
