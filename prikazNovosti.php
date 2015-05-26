@@ -1,5 +1,5 @@
 <?php
-	$novosti = glob('novosti/*.txt');
+	/*$novosti = glob('novosti/*.txt');
 	rsort($novosti);
 	
 	foreach($novosti as $n){
@@ -32,7 +32,7 @@
 		$tekst_detaljno = '';
 		for($j=$kraj; $j<count($linije); $j++){
 			$tekst_detaljno = $tekst_detaljno.$linije[$j]."<br>";
-		}
+		}*/
 		
 		/*$prikazi = $prikazi.'<div class="novosti_konkurs">
 							<div class="odbrana_slika">'.$slika.'</div>
@@ -41,7 +41,7 @@
 							<p>'.$tekst.'</p>
 							<a href="#"> Detaljnije... </a>
 							</div>';*/
-		$nema = false;
+		/*$nema = false;
 		if($tekst_detaljno == '')
 			$nema = true;
 		
@@ -70,7 +70,7 @@
 								<p>'.$tekst.'</p>
 								<a href="#"></a>
 								</div>';
-		}
+		}*/
 							
 		/*echo '<div class="novosti_konkurs">
 							<div class="odbrana_slika">'.$slika.'</div>
@@ -79,6 +79,29 @@
 							<p>'.$tekst.'</p>
 							<a href="#"> Detaljnije... </a>
 							</div>';*/
+/*	}
+	fclose($novost);*/
+	
+	$veza = new PDO("mysql:dbname=fakultet;host=localhost;charset=utf8", "root", ""); //dodali usera?
+    $veza->exec("set names utf8");
+	$rezultat = $veza->query("select id, naslov, tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2, detaljnije, slika from novost order by vrijeme desc");
+	 if (!$rezultat) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
+	 
+	 foreach ($rezultat as $novost) {
+		 print '<div class="novosti_konkurs">
+				<div class="odbrana_slika" style="background-image: url('.$novost['slika'].');"></div>
+				<h4>'.$novost['naslov'].'</h4>
+				<h5> Napisala '.$novost['autor'].' - '.date("d.m.Y. h:i:s", $novost['vrijeme2']).'</h5>
+				<p>'.$novost['tekst'].'</p>';
+		if($novost['detaljnije'] != null)
+				print '<a href="#"> Detaljnije... </a>';
+		else print '<a href="#"></a>';
+				'</div>';
 	}
-	fclose($novost);
+	
+	
 ?>
