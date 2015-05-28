@@ -11,6 +11,7 @@ Stranica bi trebala sadržati meni sa sljedećim opcijama:
 - Kontakt - forma za kontakt vlasnika stranice (fakulteta)
 
 
+
 *Napomena za podešavanje baze podataka:
 
 Potrebno je lokalno kreirati mysql bazu podataka pod nazivom fakultet i zatim u nju importovati skriptu "fakultet.sql" koja se može preuzeti sa repozitorija.
