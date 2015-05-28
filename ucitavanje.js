@@ -132,3 +132,43 @@ function potvrdaSlanja_ucitaj()
 	//ajax.open("GET", "novosti_detaljnije.html", true);
 	ajax.send();
 }
+
+function login_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "fakultet_login.php", true);
+	ajax.send();
+}
+
+function admin_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "admin_panel.html", true);
+	ajax.send();
+}
+/*
+function novosti_dodaj_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "novosti_dodaj.php", true);
+	ajax.send();
+}
+*/

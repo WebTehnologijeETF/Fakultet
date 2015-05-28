@@ -17,7 +17,7 @@
 	<div id="zaglavlje">
 		<h1> Fakultet </h1>
 		<div id="login">
-			<a href="#"> Log in </a>
+			<a href="fakultet_login.php"> Log in </a> 
 		</div>
 	</div>
 
