@@ -1,6 +1,6 @@
 	
 		
-			<form method="post" action="kontakt_forma_validacija.php"> <!-- onsubmit="kontaktValidacija(); return false;" -->
+			<form method="post" action="php/kontakt_forma_validacija.php"> <!-- onsubmit="kontaktValidacija(); return false;" -->
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
 				<input type="text" name="ime" id="ime" placeholder="Dina Ahmić" value="<?php 

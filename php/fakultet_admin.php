@@ -1,26 +1,31 @@
+<?php
+	session_start();
+?>
 
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title> ITFakultet </title>
-<link rel="stylesheet" type="text/css" href="stil.css">
-<script type="text/javascript" src="ucitavanje.js"></script>
-<script src="stablo.js"></script>
-<script src="kontaktValidacija.js"></script>
-<script src="zavrsniModifikacije.js"></script>
-<script src="zavrsniPregledaj.js"></script>
+<link rel="stylesheet" type="text/css" href="css/stil.css">
+<script type="text/javascript" src="js/ucitavanje.js"></script>
+<script src="js/stablo.js"></script>
+<script src="js/kontaktValidacija.js"></script>
+<script src="js/zavrsniModifikacije.js"></script>
+<script src="js/zavrsniPregledaj.js"></script>
+<script src="js/novostiModifikacije.js"></script>
+<script src="js/komentariModifikacije.js"></script>
+<script src="js/korisniciModifikacije.js"></script>
 </head>
-
-<body onload="naslovna_ucitaj();return false;">
+<body onload="admin_ucitaj();return false;">
 
 <div class="okvir">
 	<div id="zaglavlje">
 		<h1> Fakultet </h1>
 		<div id="login">
-			<a href="fakultet_login.php"> Log in </a>
+			<a href="php/fakultet_logout.php"> Log out </a> 
 		</div>
-	</div>
-
+	</div>	
 	<div class="glavni_meni">
 		<ul>
 			<li><a href="#" onclick="naslovna_ucitaj();return false;">Početna</a></li>
@@ -33,14 +38,8 @@
 	</div>
 	
 	<div id="baner"></div>
-		<div id="kontakt">
-			<h3>Kontaktirajte nas</h3>
-			<?php include "kontakt_validacija.php" ?>
-			<div id="forma">
-				<?php include $prikaz_forme; ?>
-			</div>
-		</div>
-		
+	<div id="stranica"></div>
+
 	<div id="podnozje"><p>Copyright &copy; IT Fakultet 2015.</p></div>
 </div>	
 </body>

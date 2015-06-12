@@ -1,12 +1,16 @@
 
 	<div id="zdodaj">
-		<h3>Dodaj novost</h3> 	
+		<h3>Izmjena novosti</h3> 	
 	
 		<div id="Zforma">
 		<!--
 			<form action="servisiNovosti.php" method="POST">
 			-->
 			<form action="" method="POST">
+			<div id="izmjenaNovostiID"> 
+					<label for="idNovostIzmjena"> ID: </label> <!-- ime -->
+					<input type="text" name="idNovostIzmjena" id="idNovostIzmjena">
+			</div>
 			<div id="naslovNovosti">
 				<label for="naslov"> Naslov: </label>
 				<input type="text" name="naslov" id="naslov">
@@ -32,7 +36,7 @@
 					<textarea name="detaljno-novost" rows="10" cols="61" id="detaljno-novost"></textarea>
 			</div>
 			<div id="dugmeNovost">
-				<input type="button" name="salji" value="Dodaj" onclick="novostDodaj(); return false;"> <!-- bilo submit i bez onclick-->
+				<input type="button" name="salji" value="Izmijeni" onclick="novostIzmijeni(); return false;"> <!-- bilo submit i bez onclick-->
 			</div>
 			</form>
 		</div>

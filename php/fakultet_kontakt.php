@@ -2,7 +2,7 @@
 		<h3>Kontaktirajte nas</h3>
 		<p> Ukoliko imate bilo kakvih pitanja vezanih za upis ili neki od naših programa, slobodno nas kontaktirajte! </p>
 		<div id="forma">
-			<form method="post" action="kontakt_forma_validacija.php"> <!--  onsubmit="kontaktValidacija(); return false;" -->
+			<form method="post" action="php/kontakt_forma_validacija.php"> <!--  onsubmit="kontaktValidacija(); return false;" -->
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
 				<input type="text" name="ime" id="ime" placeholder="Dina Ahmić">

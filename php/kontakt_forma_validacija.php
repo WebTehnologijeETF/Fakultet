@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -14,7 +14,8 @@
 <script src="js/korisniciModifikacije.js"></script>
 </head>
 
-<body onload="korisniciPregledajSve();return false;">
+<body onload="naslovna_ucitaj();return false;">
+
 <div class="okvir">
 	<div id="zaglavlje">
 		<h1> Fakultet </h1>
@@ -22,10 +23,10 @@
 			<a href="php/fakultet_login.php"> Log in </a>
 		</div>
 	</div>
-	
+
 	<div class="glavni_meni">
 		<ul>
-			<li><a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">Početna</a></li>
+			<li><a href="#" onclick="naslovna_ucitaj();return false;">Početna</a></li>
 			<li><a href="#">O fakultetu</a></li>
 			<li><a href="#" onclick="studij_ucitaj();return false;">Studij</a></li>
 			<li><a href="#">Obavještenja</a></li>
@@ -35,34 +36,14 @@
 	</div>
 	
 	<div id="baner"></div>
-	<div id="zdodaj">
-		<h3>Pregled korisnika</h3> 
-		
-		<div id="pregled_svih_korisnika"></div>
-
-		<!--
-		<div id="skrivenaForma"  >
-			<form action="" method="POST">
-			<div id="izmjenaIme">
-				<label for="korisnickoIme"> Korisničko ime: </label>
-				<input type="text" name="korisnickoIme" id="korisnickoIme">
-			</div>
-			<br>
-			<div id="izmjenaMail">
-				<label for="korisnikEmail"> Email: </label>
-				<input type="text" name="korisnikEmail" id="korisnikEmail">
-			</div>
-			<div id="dugmeKorisnikIzmjena">
-				<input type="submit" name="saljiIzmjenu" value="Izmijeni"> 
+		<div id="kontakt">
+			<h3>Kontaktirajte nas</h3>
+			<?php include "php/kontakt_validacija.php" ?>
+			<div id="forma">
+				<?php include $prikaz_forme; ?>
 			</div>
 		</div>
-		-->
-		<div id="dugmeKorisnikOsvjezi">
-			<input type="button" value="Osvježi" onclick=location.href='korisnik_pregled.php'>
-		</div>
 		
-			
-	</div>
 	<div id="podnozje"><p>Copyright &copy; IT Fakultet 2015.</p></div>
 </div>	
 </body>

@@ -85,7 +85,7 @@ function zuredi_ucitaj(indexNiza)
 		if (ajax.readyState == 4 && ajax.status == 404)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
-	ajax.open("GET", "zavrsni_uredi.html", true);
+	ajax.open("GET", "html/zavrsni_uredi.html", true);
 	ajax.send(); 
 }
 

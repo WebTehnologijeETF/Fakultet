@@ -40,7 +40,7 @@
 	}
 	
 	if($validna == 1)
-		$prikaz_forme = 'ponovo_forma.php';
+		$prikaz_forme = 'php/ponovo_forma.php';
 	else if($validna == 0)
-		$prikaz_forme ='potvrdaSlanja.php';
+		$prikaz_forme ='php/potvrdaSlanja.php';
 ?>

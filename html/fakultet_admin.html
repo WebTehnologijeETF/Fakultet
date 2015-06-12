@@ -12,20 +12,22 @@
 <script src="js/novostiModifikacije.js"></script>
 <script src="js/komentariModifikacije.js"></script>
 <script src="js/korisniciModifikacije.js"></script>
+<script src="js/novostiModifikacije.js"></script>
+<script src="js/komentariModifikacije.js"></script>
+<script src="js/korisniciModifikacije.js"></script>
 </head>
+<body onload="admin_ucitaj();return false;">
 
-<body onload="korisniciPregledajSve();return false;">
 <div class="okvir">
 	<div id="zaglavlje">
 		<h1> Fakultet </h1>
 		<div id="login">
-			<a href="php/fakultet_login.php"> Log in </a>
+			<a href="php/fakultet_logout.php"> Log out </a> <!-- moze li ovako -->
 		</div>
-	</div>
-	
+	</div>	
 	<div class="glavni_meni">
 		<ul>
-			<li><a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">Početna</a></li>
+			<li><a href="#" onclick="naslovna_ucitaj();return false;">Početna</a></li>
 			<li><a href="#">O fakultetu</a></li>
 			<li><a href="#" onclick="studij_ucitaj();return false;">Studij</a></li>
 			<li><a href="#">Obavještenja</a></li>
@@ -35,34 +37,8 @@
 	</div>
 	
 	<div id="baner"></div>
-	<div id="zdodaj">
-		<h3>Pregled korisnika</h3> 
-		
-		<div id="pregled_svih_korisnika"></div>
+	<div id="stranica"></div>
 
-		<!--
-		<div id="skrivenaForma"  >
-			<form action="" method="POST">
-			<div id="izmjenaIme">
-				<label for="korisnickoIme"> Korisničko ime: </label>
-				<input type="text" name="korisnickoIme" id="korisnickoIme">
-			</div>
-			<br>
-			<div id="izmjenaMail">
-				<label for="korisnikEmail"> Email: </label>
-				<input type="text" name="korisnikEmail" id="korisnikEmail">
-			</div>
-			<div id="dugmeKorisnikIzmjena">
-				<input type="submit" name="saljiIzmjenu" value="Izmijeni"> 
-			</div>
-		</div>
-		-->
-		<div id="dugmeKorisnikOsvjezi">
-			<input type="button" value="Osvježi" onclick=location.href='korisnik_pregled.php'>
-		</div>
-		
-			
-	</div>
 	<div id="podnozje"><p>Copyright &copy; IT Fakultet 2015.</p></div>
 </div>	
 </body>

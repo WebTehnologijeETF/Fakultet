@@ -26,7 +26,7 @@
 	}
 
 	echo '<h4> Da li ste sigurni da želite poslati ove podatke? </h4>
-			<form method="post" action="saljii.php">
+			<form method="post" action="php/saljii.php">
 			<input hidden type="text" name="ime" value="'.$imePrezime.'" />
 			<input hidden type="text" name="eemail" value="'.$eemail.'" />
 			<input hidden type="text" name="mjestoo" value="'.$mjesto.'" />
@@ -42,4 +42,4 @@
 	echo '<h4> Ako ste pogrešno popunili formu, možete ispod prepraviti unesene podatke: </h4>';
 	?>
 
-	<?php include 'ponovo_forma.php'; ?>
+	<?php include 'php/ponovo_forma.php'; ?>

@@ -1117,6 +1117,14 @@ div #dugmeOsvjezi
 	margin-left: 68px;
 }
 
+#korisnikTip input
+{
+	font-size: 10pt;
+	padding: 1px;
+	width: 277px;
+	margin-left: 84px;
+}
+
 #dugmeKorisnik input
 {
 	padding: 5px 8px 5px 8px;
@@ -1210,10 +1218,8 @@ div #dugmeOsvjezi
 {
 	text-decoration: none;
 	color: blue;
-	padding: 5px 10px 5px 5px;
+	padding: 5px 10px 5px 20px;
 	font-size: 13pt;
-	float: right;
-	margin: -105px 30px 0px 0px;
 }
 
 #komentariNazad a:hover
@@ -1232,4 +1238,15 @@ div #dugmeOsvjezi
 #detaljno a:hover
 {
 	text-decoration: underline;
+}
+
+/* id vijesti na koju pisemo komentar*/
+div #dodajKomentarID
+{
+	display: none;
+}
+
+div #izmjenaNovostiID
+{
+	display: none;
 }

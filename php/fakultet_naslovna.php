@@ -20,8 +20,8 @@
 		
 	<div id="desno">
 		<h3> Novosti </h3>
-		<?php include 'prikazNovosti.php';?>
-
+		
+		<div id="prikaziNovostiPocetna"></div>
 		<!--
 		<div class="novosti_konkurs">
 			<div class="odbrana_slika"></div>

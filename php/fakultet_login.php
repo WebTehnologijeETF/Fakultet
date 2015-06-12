@@ -73,7 +73,7 @@
 <script src="js/komentariModifikacije.js"></script>
 <script src="js/korisniciModifikacije.js"></script>
 </head>
-<body>
+<body onload="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">
 
 <div class="okvir">
 	<div id="zaglavlje">

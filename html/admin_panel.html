@@ -5,8 +5,8 @@
 			<a href="#" onclick="zavrsni()"> <span id="znivo1plus">+</span> Novosti i komentari</a>
 				<div id="znivo2">
 					<ul>
-						<li><a href="novosti_pregled.php"> Pregled</a></li>
-						<li><a href="novosti_dodaj.php"> Dodaj</a></li>
+						<li><a href="#" onclick="novosti_pregled_ucitaj(); novostPregledajSve();return false;"> Pregled</a></li>
+						<li><a href="#" onclick="novosti_dodaj_ucitaj(); return false;"> Dodaj</a></li>
 					</ul>
 				</div>
 			</li>
@@ -14,7 +14,7 @@
 			<a href="#" onclick="master()"> <span id="mnivo1plus">+</span> Korisnici</a>
 				<div id="mnivo2">
 					<ul>
-						<li><a href="korisnik_pregled.php"> Pregled</a></li>
+						<li><a href="korisnik_pregled.php"> Pregled</a></li> <!-- php folder-->
 						<li><a href="korisnik_dodaj.php"> Dodaj</a></li>
 					</ul>
 				</div>

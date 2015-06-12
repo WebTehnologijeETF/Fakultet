@@ -1,0 +1,40 @@
+	
+	<div id="komentari"> 
+		<h3> Komentari </h3>
+		
+		<div id="prikaz_komentara_na_novost_sa_pocetne"></div>
+		
+		<br><br>
+		<h4> Novi komentar </h4>
+		<br><br>
+		<div id="komentarForma">
+			<form action="" method="POST">
+				<div id="dodajKomentarID"> 
+					<label for="idNovostKomentar"> ID: </label> <!-- ime -->
+					<input type="text" name="idNovostKomentar" id="idNovostKomentar">
+				</div>
+				<div id="autor">
+					<label for="ime"> Autor: </label>
+					<input type="text" name="ime" id="ime">
+				</div>
+				<br>
+				<div id="mail2">
+					<label for="eemail"> E-mail adresa: </label> 
+					<input type="email" name="eemail" id="eemail">
+				</div>
+				<div id="pitanje">
+					<label for="upit"> Unesite komentar: </label><br> 
+					<textarea name="tekst-komentar" rows="10" cols="61" id="tekst-komentar"></textarea> 
+				</div>
+				<div id="dugmeNovost">
+					<input type="button" name="salji" value="Pošalji" onclick="komentarDodaj();return false;"> <!-- bilo submit i bez onclick-->
+				</div>
+			</form>
+		</div>
+		
+		<div id="komentariNazad">
+			<a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;"> Nazad na početnu </a>
+		</div>
+		
+	</div>
+

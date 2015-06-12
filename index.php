@@ -3,15 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title> ITFakultet </title>
-<link rel="stylesheet" type="text/css" href="stil.css">
-<script type="text/javascript" src="ucitavanje.js"></script>
-<script src="stablo.js"></script>
-<script src="kontaktValidacija.js"></script>
-<script src="zavrsniModifikacije.js"></script>
-<script src="zavrsniPregledaj.js"></script>
+<link rel="stylesheet" type="text/css" href="css/stil.css">
+<script type="text/javascript" src="js/ucitavanje.js"></script>
+<script src="js/stablo.js"></script>
+<script src="js/kontaktValidacija.js"></script>
+<script src="js/zavrsniModifikacije.js"></script>
+<script src="js/zavrsniPregledaj.js"></script>
+<script src="js/novostiModifikacije.js"></script>
+<script src="js/komentariModifikacije.js"></script>
+<script src="js/korisniciModifikacije.js"></script>
 </head>
 
-<body onload="naslovna_ucitaj();return false;">
+<body onload="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">
 
 <div class="okvir">
 	<div id="zaglavlje">
@@ -23,7 +26,7 @@
 
 	<div class="glavni_meni">
 		<ul>
-			<li><a href="#" onclick="naslovna_ucitaj();return false;">Početna</a></li>
+			<li><a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">Početna</a></li>
 			<li><a href="#">O fakultetu</a></li>
 			<li><a href="#" onclick="studij_ucitaj();return false;">Studij</a></li>
 			<li><a href="#">Obavještenja</a></li>

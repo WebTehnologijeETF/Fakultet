@@ -25,7 +25,7 @@
 	
 	<div class="glavni_meni">
 		<ul>
-			<li><a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">Početna</a></li>
+			<li><a href="index.php">Početna</a></li>
 			<li><a href="#">O fakultetu</a></li>
 			<li><a href="#" onclick="studij_ucitaj();return false;">Studij</a></li>
 			<li><a href="#">Obavještenja</a></li>
@@ -58,7 +58,7 @@
 		</div>
 		-->
 		<div id="dugmeKorisnikOsvjezi">
-			<input type="button" value="Osvježi" onclick=location.href='korisnik_pregled.php'>
+			<input type="button" value="Osvježi" onclick=location.href='php/korisnik_pregled.php'>
 		</div>
 		
 			
