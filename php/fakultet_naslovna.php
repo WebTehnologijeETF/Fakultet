@@ -16,6 +16,15 @@
 				<a href="https://www.edx.org/"> Pregled kurseva </a>
 			</div>
 		</div>
+		
+		<div class="cisco">
+			<h3> Cisco akademija </h3>
+			<div id="cisco_slika"> </div>
+			<div id="cisco_tekst">
+				<p> Upis u sve semestre Cisco akademije je u toku. </p>
+				<a href="http://www.cisco.com/"> Cisco </a>
+			</div>
+		</div>
 	</div>
 		
 	<div id="desno">

@@ -519,6 +519,9 @@ body
 {
 	text-align: left;
 	padding: 0px 2px 0px 1px;
+	font-size: 10pt;
+	color: #D80000;
+	display: none;
 }
 
 #forma p.validacija {
@@ -1249,4 +1252,61 @@ div #dodajKomentarID
 div #izmjenaNovostiID
 {
 	display: none;
+}
+
+/* Cisco naslovna */
+.cisco
+{
+	width: 450px;
+	height: 200px;
+	padding: 0px 0px 5px 0px;
+	border-left: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+
+#cisco_slika
+{
+	float: left;
+	width: 190px;
+	height: 141px;
+	padding: 10px 5px 10px 5px;
+	background-image: url("slike/cisco.png");
+	background-repeat: no-repeat;
+	margin-left: 14px;
+	margin-top: -3px;
+}
+
+#cisco_tekst
+{
+	float: right;
+	width: 220px;
+}
+
+#cisco_tekst a
+{
+	font-size: 12pt;
+	text-decoration: none;
+	font-weight: bold;
+	color: #009999;
+	padding: 24px 30px 5px 10px;
+	float: right;
+}
+
+#cisco_tekst a:hover
+{
+	text-decoration: underline;
+}
+
+.cisco h3
+{
+	background-color: lightgray;
+	padding: 5px 10px 5px 10px;
+	font-family: Philosopher;
+	font-size: 15pt;
+}
+
+#cisco_tekst p
+{
+	padding: 0px 10px 5px 10px;
+	text-align: left;
 }

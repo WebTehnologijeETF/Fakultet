@@ -2,35 +2,37 @@
 		<h3>Kontaktirajte nas</h3>
 		<p> Ukoliko imate bilo kakvih pitanja vezanih za upis ili neki od naših programa, slobodno nas kontaktirajte! </p>
 		<div id="forma">
-			<form method="post" action="php/kontakt_forma_validacija.php"> <!--  onsubmit="kontaktValidacija(); return false;" -->
+			<form action="" method="post">
 			<div id="imePrezime">
 				<label for="ime"> Vaše ime i prezime: </label>
 				<input type="text" name="ime" id="ime" placeholder="Dina Ahmić">
 				<div class="validacija_slika" id="slika1"> </div>
-				<p class="validacija" id="obavezno"> Ime i prezime moraju imati više od tri slova </p>
+				<p id="obavezno"> Ime i prezime moraju imati više od tri slova </p>
 			</div>
 			<br>
 			<div id="mail">
 				<label for="eemail"> E-mail adresa: </label> 
 				<input type="email" name="eemail" id="eemail" placeholder="dahmic1@etf.unsa.ba">
 				<div class="validacija_slika" id="slika2"> </div>
-				<p class="validacija" id="obaveznoo"> Obavezno unijeti validan email </p>
+				<p id="obaveznoo"> Obavezno unijeti validan email </p>
 			</div>
 			<br>
+			<!--
 			<div id="mjestoValidacija">
 				<label for="mjestoo"> Mjesto: </label>
 				<input type="text" name="mjestoo" id="mjestoo" placeholder="Sarajevo">
 				<div class="validacija_slika" id="slika4"> </div>
-				<p class="validacija" id="obaveznoM"> </p>
+				<p id="obaveznoM"> </p>
 			</div>
 			<br>
 			<div id="PBValidacija">
 				<label for="pbr"> Poštanski broj: </label>
 				<input type="text" name="pbr" id="pbr" placeholder="71000">
 				<div class="validacija_slika" id="slika5"> </div>
-				<p class="validacija" id="obaveznoPB"> </p>
+				<p id="obaveznoPB"> </p>
 			</div>
 			<br>
+			-->
 			<label for="biraj">	Odaberite tip poruke: </label>
 				<select id="biraj" name="tipPoruke">
 					<option value="pitanje"> Pitanje </option>
@@ -41,10 +43,10 @@
 				<label for="upit"> Unesite svoj komentar ili pitanje: </label><br> 
 				<textarea id="upit" name="upit" rows="10" cols="61" placeholder="Poruka..."></textarea>
 				<div class="validacija_slika" id="slika3"> </div>
-				<p class="validacija" id="poruka"> Obavezno unijeti </p>
+				<p id="poruka"> Obavezno unijeti </p>
 			</div>
 			<div id="dugme">
-				<input type="submit" value="Pošalji"> 
+				<input type="button" value="Pošalji" onclick="kontaktValidacija(); return false;"> 
 			</div>
 			</form>
 		</div>

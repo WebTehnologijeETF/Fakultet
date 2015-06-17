@@ -10,7 +10,6 @@ function rest_get($request, $data) {
 	$veza = new PDO("mysql:dbname=fakultet;host=localhost;charset=utf8", "root", "");
 	$veza->exec("set names utf8");
 
-	//pogledaj ovdje treba li prepare
 	$komentari = $veza->query("select id, vijest, autor, tekst, UNIX_TIMESTAMP(vrijeme) vrijeme3, email from komentar where vijest=".$data['vijest']." order by vrijeme asc");
 	if (!$komentari) {
 		$greska = $veza->errorInfo();
@@ -18,7 +17,7 @@ function rest_get($request, $data) {
 		exit();
 	}
 	
-	$brKomentara = $veza->query("select count(*) from komentar where vijest=".$data['vijest']);//jel ovdje propust?
+	$brKomentara = $veza->query("select count(*) from komentar where vijest=".$data['vijest']);
 	$broj = $brKomentara->fetchColumn();
 	if ($broj == 0)
 		print "{ \"odgovor\": ".'"Nema komentara na ovu novost"'."}";

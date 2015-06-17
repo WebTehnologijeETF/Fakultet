@@ -13,7 +13,7 @@
 		 if($password == '')
 			$error .= 'Morate unijeti šifru<br>';
 		 if($error == ''){
-			 $rez = $veza->prepare('SELECT * FROM korisnik WHERE username = :username and password=md5(:password)');
+			 $rez = $veza->prepare('SELECT * FROM korisnik WHERE username = :username and password=md5(:password) and tip="administrator"');
 			 $rez->bindParam(':username', $username);
 			 $rez->bindParam(':password', $password);
 			 $rez->execute();
@@ -24,7 +24,7 @@
 				 exit;
 			 }
 			 else {
-				$error .= 'Pogrešni pristupni podaci<br>';
+				$error .= 'Pogrešni pristupni podaci ili niste administrator<br>';
 			 }
 		 }
 	}
@@ -64,6 +64,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title> ITFakultet </title>
 <link rel="stylesheet" type="text/css" href="css/stil.css">
+<link rel="icon" href="slike/favicon.ico">
 <script type="text/javascript" src="js/ucitavanje.js"></script>
 <script src="js/stablo.js"></script>
 <script src="js/kontaktValidacija.js"></script>
@@ -84,10 +85,10 @@
 	</div>	
 	<div class="glavni_meni">
 		<ul>
-			<li><a href="#" onclick="naslovna_ucitaj(); novostPrikaziNaPocetnoj();return false;">Početna</a></li> 
-			<li><a href="#">O fakultetu</a></li>
+			<li><a href="index.php">Početna</a></li>
+			<li><a href="#" onclick="ofakultetu_ucitaj();return false;">O fakultetu</a></li>
 			<li><a href="#" onclick="studij_ucitaj();return false;">Studij</a></li>
-			<li><a href="#">Obavještenja</a></li>
+			<li><a href="#" onclick="obavjestenja_pregled_ucitaj(); obavjestenjaPregledajSve(); return false";>Obavještenja</a></li>
 			<li><a href="#" onclick="partneri_ucitaj();return false;">Partneri</a></li>
 			<li class="zadnji_u_meniju"><a href="#" onclick="kontakt_ucitaj();return false;">Kontakt</a></li>
 		</ul>

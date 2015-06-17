@@ -10,8 +10,7 @@ function rest_get($request, $data) {
 	$veza = new PDO("mysql:dbname=fakultet;host=localhost;charset=utf8", "root", "");
 	$veza->exec("set names utf8");
 	
-	//pogledaj ovdje treba li prepare
-	$rezultat = $veza->query("select n.id, n.naslov, n.tekst, n.autor, UNIX_TIMESTAMP(n.vrijeme) vrijeme2, n.detaljnije, n.slika, count(k.id) as brojKomentara from novost n left join komentar k on k.vijest = n.id group by n.id");
+	$rezultat = $veza->query("select n.id, n.naslov, n.tekst, n.autor, UNIX_TIMESTAMP(n.vrijeme) vrijeme2, n.detaljnije, n.slika, count(k.id) as brojKomentara from novost n left join komentar k on k.vijest = n.id group by n.id order by n.vrijeme desc");
 	if (!$rezultat) {
 		$greska = $veza->errorInfo();
 		print "SQL greška: " . $greska[2];
@@ -42,20 +41,7 @@ function rest_post($request, $data) {
 
 }
 
-function rest_delete($request, $data) { //moze li ovo ovako u delete, dodano data 
-	/*$veza = new PDO("mysql:dbname=fakultet;host=localhost;charset=utf8", "root", "");
-	$veza->exec("set names utf8");*/
-	/*$idNovosti = $data['id'];
-	$rezultat = $veza->prepare("delete from novost where id = :id");
-	$rezultat->bindParam(':id', $idNovosti);
-	$rezultat->execute();*/
-	//$rezultat = $veza->query("delete from novost where id = ".$data['id']);
-	
-	/*$idNovosti = explode('=', $request, 2); zadnji pokusaj bio 
-	$rezultat = $veza->query("delete from novost where id = ".$idNovosti);*/
-	
-}
-
+function rest_delete($request, $data) { }
 function rest_put($request, $data) { }
 function rest_error($request) { }
 

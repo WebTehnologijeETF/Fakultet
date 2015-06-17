@@ -46,7 +46,7 @@ function kontakt_ucitaj()
 		if (ajax.readyState == 4 && ajax.status == 404)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
-	ajax.open("GET", "php/fakultet_kontakt.php", true);
+	ajax.open("GET", "html/fakultet_kontakt.html", true);
 	ajax.send();
 }
 

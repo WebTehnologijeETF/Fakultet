@@ -1,7 +1,11 @@
 function kontaktValidacija(){
 	var ime = document.getElementById('ime');
+	var ime1 = document.getElementById('ime').value;
 	var mail = document.getElementById('eemail');
+	var mail1 = document.getElementById('eemail').value;
 	var poruka = document.getElementById('upit');
+	var poruka1 = document.getElementById('upit').value;
+	var tip1 = document.getElementById('biraj').value;
 	
 	var validna = true;
 	var imep = false;
@@ -63,17 +67,22 @@ function kontaktValidacija(){
 		poruka.focus();
 	}
 	
+	if(validna) {
 	var ajax = new XMLHttpRequest();
-	var mjesto = document.getElementById('mjestoo').value;
-	mjesto = encodeURIComponent(mjesto);
-	var mjesto1 = document.getElementById('mjestoo');
-	var pbroj = document.getElementById('pbr').value;
-	pbroj = encodeURIComponent(pbroj);
-	var pbroj1 = document.getElementById('pbr');
+	//var mjesto = document.getElementById('mjestoo').value;
+	//mjesto = encodeURIComponent(mjesto);
+	//var mjesto1 = document.getElementById('mjestoo');
+	//var pbroj = document.getElementById('pbr').value;
+	//pbroj = encodeURIComponent(pbroj);
+	//var pbroj1 = document.getElementById('pbr');
 	ajax.onreadystatechange = function() {
 		if (ajax.readyState == 4 && ajax.status == 200){
 			var odgovor = JSON.parse(ajax.responseText);
-			if(odgovor.greska == "Nepostojeće mjesto"){
+			alert(odgovor.odgovor);
+			ime.value = '';
+			mail.value = '';
+			poruka.value = '';
+			/*if(odgovor.greska == "Nepostojeće mjesto"){
 				mjesto1.style.borderColor = "red";
 				mjesto1.focus();
 				document.getElementById('slika4').style.display = "inline-block";
@@ -104,14 +113,15 @@ function kontaktValidacija(){
 				pbroj1.style.borderColor = "";
 				document.getElementById('obaveznoPB').style.display="none";
 				document.getElementById('slika5').style.display="none";
-			}
+			}*/
 		}
 		if (ajax.readyState == 4 && ajax.status == 404) {
 			document.getElementById('mjestoo').innerHTML = "Greska: nepoznat URL";
 		}
 	}
-	ajax.open("GET", "http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto=" + mjesto + "&postanskiBroj=" + pbroj, true);
-	ajax.send();
-	
-	//return validna;
+	//ajax.open("GET", "http://zamger.etf.unsa.ba/wt/postanskiBroj.php?mjesto=" + mjesto + "&postanskiBroj=" + pbroj, true);
+	ajax.open("POST", "php/servisiMail.php", true);
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.send("ime=" + ime1 + "&eemail=" + mail1 + "&tipPoruke=" + tip1 + "&upit=" + poruka1);
+	}
 }

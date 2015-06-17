@@ -46,7 +46,7 @@ function kontakt_ucitaj()
 		if (ajax.readyState == 4 && ajax.status == 404)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
-	ajax.open("GET", "php/fakultet_kontakt.php", true);
+	ajax.open("GET", "html/fakultet_kontakt.html", true); //php/fakultet_kontakt.php
 	ajax.send();
 }
 
@@ -244,5 +244,31 @@ function izmjenaNovosti_ucitaj(idNovosti)
 			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
 	}
 	ajax.open("GET", "html/novost_izmijeni.html", true);
+	ajax.send();
+}
+
+function ofakultetu_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "html/ofakultetu.html", true);
+	ajax.send();
+}
+
+function obavjestenja_pregled_ucitaj()
+{
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200)
+			document.getElementById("stranica").innerHTML = ajax.responseText;
+		if (ajax.readyState == 4 && ajax.status == 404)
+			document.getElementById("stranica").innerHTML = "Greska: nepoznat URL";
+	}
+	ajax.open("GET", "html/obavjestenja_pregled.html", true);
 	ajax.send();
 }

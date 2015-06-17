@@ -165,7 +165,7 @@ function novostIzmijeni()
 			
 	ajax.open("POST", "php/servisiNovostiIzmjena.php", true);
 	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	ajax.send("id=" + idNovosti + "$naslov" + naslov + "$autor" + autor + "$slika" + slika + "$tekst" + tekst + "$detaljnije" + detaljnije);
+	ajax.send("id=" + idNovosti + "&naslov=" + naslov + "&autor=" + autor + "&slika=" + slika + "&tekst=" + tekst + "&detaljnije=" + detaljnije);
 }
 
 //prikaz novosti na pocetnoj
@@ -296,5 +296,53 @@ function novostDetaljnije(idNovosti)
 	}
 			
 	ajax.open("GET", "php/servisiNovostiDetaljno.php?id=" + idNovosti, true);
+	ajax.send();
+}
+
+//pregled obavjestenja - iz menija
+function obavjestenjaPregledajSve(){
+	var ajax = new XMLHttpRequest();
+	var prikaz;
+	var datum;
+	
+	ajax.onreadystatechange = function() {// Anonimna funkcija
+		if (ajax.readyState == 4 && ajax.status == 200){
+			novost = JSON.parse(ajax.responseText); 
+			prikaz = "<div>";
+			
+			for(i=0; i<novost.novosti.length; i++){
+				prikaz += "<div id='novost_detaljno'>";
+				prikaz += "<p>";
+				prikaz += novost.novosti[i].naslov;
+				prikaz += "<br>Napisala: ";
+				prikaz += novost.novosti[i].autor;
+				prikaz += " - ";
+				datum = novost.novosti[i].vrijeme2;
+				var pomDatum = new Date(datum * 1000);
+				prikaz += (pomDatum.getDate()+"."+(pomDatum.getMonth()+1)+"."+pomDatum.getFullYear()+". "+pomDatum.getHours()+":"+pomDatum.getMinutes()+":"+pomDatum.getSeconds());
+				prikaz += "<br><br>";
+				if (novost.novosti[i].slika == null){
+					prikaz += "";
+				}
+				else {
+					prikaz += "<div class='detaljno_slika' style='background-image: url(";
+					prikaz += novost.novosti[i].slika;
+					prikaz += ");'></div><br>";
+				}
+				prikaz += novost.novosti[i].tekst;
+				prikaz += "<br><br>";
+				if (novost.novosti[i].detaljnije == null)
+					prikaz += "";
+				else prikaz += novost.novosti[i].detaljnije;
+				prikaz += "</p>";
+				prikaz += "</div>";
+				prikaz += "<small>--------------------------------------------------------------------------------------------------------------------------</small><br>";
+			}	
+			prikaz += "</div>";
+			document.getElementById('prikaz_svih_novosti').innerHTML = prikaz;
+		}
+	}
+			
+	ajax.open("GET", "php/servisiNovosti.php", true);
 	ajax.send();
 }

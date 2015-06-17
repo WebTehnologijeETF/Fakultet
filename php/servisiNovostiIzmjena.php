@@ -12,11 +12,11 @@ function rest_post($request, $data) {
 	$veza = new PDO("mysql:dbname=fakultet;host=localhost;charset=utf8", "root", "");
 	$veza->exec("set names utf8");
 	
-	$id = $data['idNovosti'];
+	$id = $data['id'];
 	$autor = $data['autor'];
 	$naslov = $data['naslov'];
 	$slika = $data['slika'];
-	$tekst = $data['tekst']
+	$tekst = $data['tekst'];
 	$detaljnije = $data['detaljnije'];
 	
 	/*$id = htmlentities($_POST['id'], ENT_QUOTES);
@@ -26,13 +26,14 @@ function rest_post($request, $data) {
 	$tekst = htmlentities($_POST['tekst'], ENT_QUOTES);
 	$detaljnije = htmlentities($_POST['detaljnije'], ENT_QUOTES);*/
 	
-	//$novost = $veza->query("update novost set naslov=".$naslov.",autor=".$autor.",tekst=".$tekst.",detaljnije=".$detaljnije.",slika=".$slika." where id=".$id);
+	//$novost = $veza->query("update novost set naslov=".$naslov.",autor='neki autor',tekst=".$tekst.",detaljnije=".$detaljnije.",slika=".$slika." where id=".$id);
+	//$novost = $veza->query("update novost set naslov='neki naslov' where id=6");
 	$novost = $veza->prepare("update novost set naslov = :naslov, autor = :autor, tekst = :tekst, detaljnije = :detaljnije, slika = :slika where id = :id");
 	$novost->bindParam(':id', $id);
 	$novost->bindParam(':naslov', $naslov);
 	$novost->bindParam(':autor', $autor);
 	$novost->bindParam(':tekst', $tekst);
-	$novost->bindParam(':detaljnije', $detaljnoije);
+	$novost->bindParam(':detaljnije', $detaljnije);
 	$novost->bindParam(':slika', $slika);
 	$novost->execute();
 
