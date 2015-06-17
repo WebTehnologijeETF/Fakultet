@@ -19,7 +19,7 @@ function rest_post($request, $data) {
 	ini_set("smtp_port", "25");
 	ini_set("sendmail_from", "dahmic1@etf.unsa.ba");
 	$headers = "From: ".$eemail.PHP_EOL;
-	$headers .= "Cc: ajasarevic1@etf.unsa.ba".PHP_EOL; 
+	$headers .= "Cc: iprazina1@etf.unsa.ba".PHP_EOL; 
 	$headers .= "Content-Type: text/html; charset=utf-8".PHP_EOL;
 	$subject = "Kontakt - ".$tip.PHP_EOL; 
 	$message = $poruka." <br><br>".$imePrezime;

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2015 at 01:24 AM
+-- Generation Time: Jun 17, 2015 at 08:16 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `komentar` (
   `email` varchar(50) COLLATE utf8_slovenian_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `vijest` (`vijest`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `komentar`
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `korisnik` (
 --
 
 INSERT INTO `korisnik` (`username`, `password`, `email`, `tip`) VALUES
-('admin', '21232f297a57a5a743894a0e4a801fc3', 'dahmic1@etf.unsa.ba', ''),
+('admin', '21232f297a57a5a743894a0e4a801fc3', 'dahmic1@etf.unsa.ba', 'administrator'),
 ('dina', 'e274648aed611371cf5c30a30bbe1d65', 'dahmic1@etf.unsa.ba', 'administrator');
 
 -- --------------------------------------------------------
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `novost` (
   `detaljnije` text COLLATE utf8_slovenian_ci,
   `slika` varchar(50) COLLATE utf8_slovenian_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `novost`
